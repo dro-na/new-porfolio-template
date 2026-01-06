@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myFolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      .responsive-flex {
+        /* mobile first */
+      }
+
+      @media (min-width: 750px) {
+        .responsive-flex {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 3em;
+          border-bottom: 1px solid white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="responsive-flex">
+        <!-- logo -->
+        <div class="logo">
+          <a href="">EPHRAIM <br />MGBEBU C.</a>
+        </div>
+
+        <!-- dropdn -->
+        <div class="lang-dropdn">
+          <h3>
+            <span class="hoverme"><a href="#">Language</a></span>
+            <span>
+              <i class="fa-solid fa-chevron-down"></i>
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </h3>
+          <div class="dropdn">
+            <p><a href="#">English</a></p>
+            <p><a href="#">Français</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <nav>
+        <ul>
+          <li><a href="#">Writing</a></li>
+          <li><a href="#">Speaking</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="aboutMe">
+        <div class="aboutMeText">
+          <h1>EPHRAIM MGBEBU CHIMA</h1>
+          <p>
+            I'm a FullStack Developer and brand Identity Manager. Am currently
+            building a Fintech App UI.
+          </p>
+          <a href="#" class="aboutMeBtn">About me</a>
+        </div>
+
+        <div class="myImg">
+          <img src="images/myImage.jpeg" alt="my image" />
+        </div>
+      </div>
+      <div class="articles">
+        <h1>Articles about accessible design</h1>
+        <div class="card-container">
+          <a href="" class="cards">
+            <div class="green-bar"></div>
+            <h3>ADHD and digital accessibility</h3>
+            <p>With Sonia Prevost</p>
+          </a>
+          <!-- this card ends here -->
+
+          <a href="" class="cards">
+            <div class="green-bar"></div>
+            <h3>Ableist design: challenging systemic norms</h3>
+            <!-- <p>With Sonia Prevost</p> -->
+          </a>
+          <!-- this card ends here -->
+
+          <a href="" class="cards">
+            <div class="green-bar"></div>
+            <h3>Design and accessibility</h3>
+            <p>with Ludovic Evelin</p>
+          </a>
+          <!-- this card ends here -->
+
+          <a href="" class="cards">
+            <div class="green-bar"></div>
+            <h3>Autism in tech</h3>
+            <p>with Veronique Sermage</p>
+          </a>
+          <!-- this card ends here -->
+        </div>
+        <a href="#" class="readArtcleBtn">Read all articles</a>
+      </div>
+    </section>
+  </body>
+</html>
