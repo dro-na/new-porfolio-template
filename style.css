@@ -32,6 +32,20 @@ body {
   font-family: "TT Commons Pro", system-ui, -apple-system, sans-serif;
 }
 
+& .green-bar {
+  height: 8px;
+  background-color: #d9ffb6;
+  border: 1.4px solid #332e2e;
+  width: 50px;
+  padding: 2px;
+  border-radius: 5px;
+}
+& .work-description:hover .green-bar {
+  width: 80px;
+  background-color: pink;
+  transition: 0.3s;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -243,6 +257,51 @@ header {
   }
 }
 
+.work-grid {
+  margin-top: 4em;
+  padding: 0 1em;
+
+  & h1 {
+    font-weight: 700;
+    font-size: 2em;
+  }
+  & .work-container {
+    /* no codes yet */
+    & .first-work-container {
+      & .workImage {
+        img {
+          width: 100%;
+          padding: 1.6em 0;
+          border-radius: 45px;
+          height: 25em;
+
+          @media (min-width: 750px) {
+            border-radius: 1px;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+          }
+        }
+      }
+      & .work-description {
+        & a{
+            text-decoration: none;
+            color: #332e2e;
+        }
+        & h3 {
+          font-size: 1.5em;
+          font-weight: 500;
+          padding: 1em 0;
+        }
+
+        & p {
+          font-size: 1.2em;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 750px) {
   header {
     display: flex;
@@ -281,6 +340,15 @@ header {
   .hero .articles {
     padding: 6em 2em;
   }
+
+  .first-work-container {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    & > div {
+      flex: 1;
+    }
+  }
 }
 
 @media (min-width: 990px) {
@@ -309,6 +377,10 @@ header {
   }
 
   .hero .articles {
+    padding: 0 9em;
+  }
+
+  .work-grid {
     padding: 0 9em;
   }
 }
