@@ -144,6 +144,7 @@ header {
   }
 }
 
+
 .hero {
   position: relative;
 
@@ -155,7 +156,16 @@ header {
     display: inline-block;
     border-radius: 50px;
     margin-top: 2em;
+
+    &:hover{
+        color: #332e2e;
+        border: 1px solid #332e2e;
+        background: none;
+        transition: 0.3s;
+    }
   }
+
+
 
   & .aboutMe {
     padding-top: 4em;
@@ -183,6 +193,13 @@ header {
       padding: 1em 2em;
       display: inline-block;
       border-radius: 50px;
+
+      &:hover{
+        background-color: #fff7f3;
+        color: #332e2e;
+        border: 1px solid #332e2e;
+        transition: 0.3s;
+      }
     }
     & .myImg {
       position: absolute;
@@ -283,9 +300,9 @@ header {
         }
       }
       & .work-description {
-        & a{
-            text-decoration: none;
-            color: #332e2e;
+        & a {
+          text-decoration: none;
+          color: #332e2e;
         }
         & h3 {
           font-size: 1.5em;
@@ -300,6 +317,118 @@ header {
       }
     }
   }
+}
+
+.event-section {
+  padding: 0 1em;
+  & h1 {
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  & .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    & .card {
+      border: 1px solid #332e2e;
+      padding: 1em;
+      line-height: 2.5em;
+      border-radius: 1em;
+      & h3 {
+        font-weight: 500;
+        font-size: 1.4em;
+      }
+
+      & p {
+        font-weight: 300;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  & .eventBtn {
+    text-decoration: none;
+    background-color: #332e2e;
+    color: white;
+    padding: 1em 2em;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 2em;
+  }
+
+  .eventBtn:hover{
+    background-color: #fff7f3;
+    border: 1px solid #332e2e;
+    color: #332e2e;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+
+footer{
+    background-color: #d9ffb6;
+    margin-top: 3em;
+    padding-top: 3em;
+    
+
+
+    & .list-container{
+        border-top: 1px solid #332e2e;
+        display: flex;
+        justify-content: space-between;
+        padding: 2em 1em;
+
+       & .first-list{
+        line-height: 2em;
+           & h1{
+               font-weight: 700;
+               font-size: 1.4em;
+            }
+            & p{
+                font-size: 1.4em;
+                font-weight: 300;
+                width: 150px;
+            }
+        }
+        & .second-list{
+            ul{
+                list-style: none;
+                line-height: 3em;
+            }
+            ul li a{
+                text-decoration: none;
+                color: #332e2e;
+                font-weight: 500;
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    & .lastOF-footer{
+        background-color:#332e2e;
+        color: #fff7f3;
+        padding: 2.5em 1em;
+        line-height: 1.6em;
+        & h3{
+            font-weight: 500;
+            font-size: 1.5em;
+            text-transform: capitalize;
+        }
+
+        & p{
+            font-weight: 300;
+            font-size: 1.1em;
+
+        }
+        & p a{
+            color: #fff7f3;
+        }
+        & p a:hover{
+            text-decoration: none;
+        }
+    }
 }
 
 @media (min-width: 750px) {
@@ -344,7 +473,7 @@ header {
   .first-work-container {
     display: flex;
     align-items: center;
-    gap: .8em;
+    gap: 0.8em;
     & > div {
       flex: 1;
     }
