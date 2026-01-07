@@ -376,9 +376,11 @@ footer{
 
     & .list-container{
         border-top: 1px solid #332e2e;
-        display: flex;
         justify-content: space-between;
         padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
 
        & .first-list{
         line-height: 2em;
@@ -393,9 +395,17 @@ footer{
             }
         }
         & .second-list{
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            ul:first-child{
+                & #line{
+                    text-decoration: underline;
+                }
+            }
             ul{
                 list-style: none;
-                line-height: 3em;
+                line-height: 2em;
             }
             ul li a{
                 text-decoration: none;
