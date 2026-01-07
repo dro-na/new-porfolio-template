@@ -144,7 +144,6 @@ header {
   }
 }
 
-
 .hero {
   position: relative;
 
@@ -157,15 +156,13 @@ header {
     border-radius: 50px;
     margin-top: 2em;
 
-    &:hover{
-        color: #332e2e;
-        border: 1px solid #332e2e;
-        background: none;
-        transition: 0.3s;
+    &:hover {
+      color: #332e2e;
+      border: 1px solid #332e2e;
+      background: none;
+      transition: 0.3s;
     }
   }
-
-
 
   & .aboutMe {
     padding-top: 4em;
@@ -194,7 +191,7 @@ header {
       display: inline-block;
       border-radius: 50px;
 
-      &:hover{
+      &:hover {
         background-color: #fff7f3;
         color: #332e2e;
         border: 1px solid #332e2e;
@@ -358,7 +355,7 @@ header {
     margin-top: 2em;
   }
 
-  .eventBtn:hover{
+  .eventBtn:hover {
     background-color: #fff7f3;
     border: 1px solid #332e2e;
     color: #332e2e;
@@ -366,79 +363,74 @@ header {
   }
 }
 
+footer {
+  background-color: #d9ffb6;
+  margin-top: 3em;
+  padding-top: 3em;
 
-footer{
-    background-color: #d9ffb6;
-    margin-top: 3em;
-    padding-top: 3em;
-    
+  & .list-container {
+    border-top: 1px solid #332e2e;
+    justify-content: space-between;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 
-
-    & .list-container{
-        border-top: 1px solid #332e2e;
-        justify-content: space-between;
-        padding: 2em 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-
-       & .first-list{
+    & .first-list {
+      line-height: 2em;
+      & h1 {
+        font-weight: 700;
+        font-size: 1.4em;
+      }
+      & p {
+        font-size: 1.4em;
+        font-weight: 300;
+        width: 150px;
+      }
+    }
+    & .second-list {
+      display: flex;
+      gap: 1em;
+      flex-direction: column;
+      ul:first-child {
+        & #line {
+          text-decoration: underline;
+        }
+      }
+      ul {
+        list-style: none;
         line-height: 2em;
-           & h1{
-               font-weight: 700;
-               font-size: 1.4em;
-            }
-            & p{
-                font-size: 1.4em;
-                font-weight: 300;
-                width: 150px;
-            }
-        }
-        & .second-list{
-            display: flex;
-            gap: 1em;
-            flex-direction: column;
-            ul:first-child{
-                & #line{
-                    text-decoration: underline;
-                }
-            }
-            ul{
-                list-style: none;
-                line-height: 2em;
-            }
-            ul li a{
-                text-decoration: none;
-                color: #332e2e;
-                font-weight: 500;
-                font-size: 1.2em;
-            }
-        }
+      }
+      ul li a {
+        text-decoration: none;
+        color: #332e2e;
+        font-weight: 500;
+        font-size: 1.2em;
+      }
     }
+  }
+}
+& .lastOF-footer {
+  background-color: #332e2e;
+  color: #fff7f3;
+  padding: 2.5em 1em;
+  line-height: 1.6em;
+  & h3 {
+    font-weight: 500;
+    font-size: 1.5em;
+    text-transform: capitalize;
+  }
 
-    & .lastOF-footer{
-        background-color:#332e2e;
-        color: #fff7f3;
-        padding: 2.5em 1em;
-        line-height: 1.6em;
-        & h3{
-            font-weight: 500;
-            font-size: 1.5em;
-            text-transform: capitalize;
-        }
-
-        & p{
-            font-weight: 300;
-            font-size: 1.1em;
-
-        }
-        & p a{
-            color: #fff7f3;
-        }
-        & p a:hover{
-            text-decoration: none;
-        }
-    }
+  & p {
+    font-weight: 300;
+    font-size: 1.1em;
+  }
+  & p a {
+    color: #fff7f3;
+  }
+  & p a:hover {
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 750px) {
@@ -488,6 +480,29 @@ footer{
       flex: 1;
     }
   }
+
+  .event-section .card-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer .list-container {
+    flex-direction: row;
+    .second-list {
+      flex-direction: row;
+      /* Remove the red background too */
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .lastOF-footer {
+    padding: 0 9em;
+    display: flex;
+    flex-direction: row;
+    padding: 3em;
+    gap: 1em;
+  }
 }
 
 @media (min-width: 990px) {
@@ -521,5 +536,38 @@ footer{
 
   .work-grid {
     padding: 0 9em;
+  }
+
+  .event-section {
+    padding: 0 9em;
+
+    .card-container {
+      & .card {
+        border: 1px solid #332e2e;
+        padding: 2.5em;
+        line-height: 2.5em;
+        border-radius: 1em;
+        & h3 {
+          font-weight: 500;
+          font-size: 1.8em;
+        }
+
+        & p {
+          font-weight: 300;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 0 9em;
+  }
+
+  .lastOF-footer {
+    padding: 3em 9em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
   }
 }
